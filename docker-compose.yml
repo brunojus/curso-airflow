@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 services:
 
 ######################################################
@@ -49,9 +49,9 @@ services:
       interval: 10s
       retries: 10
 
-######################################################
-# HADOOP SERVICES
-######################################################
+# ######################################################
+# # HADOOP SERVICES
+# ######################################################
   namenode:
     build: ./docker/hadoop/hadoop-namenode
     restart: always
@@ -168,14 +168,13 @@ services:
           max-file: "5"
           max-size: "10m"
     depends_on:
-      - hive-server
       - postgres
     ports:
       - "32762:8888"
     volumes:
       - ./mnt/hue/hue.ini:/usr/share/hue/desktop/conf/z-hue.ini
     environment:
-      - SERVICE_PRECONDITION=hive-server:10000 postgres:5432
+      - SERVICE_PRECONDITION=postgres:5432
     healthcheck:
       test: [ "CMD", "nc", "-z", "hue", "8888" ]
       timeout: 45s

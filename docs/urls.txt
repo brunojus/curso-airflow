@@ -1,2 +1,9 @@
 https://gist.github.com/marclamberti/f45f872dea4dfd3eaa015a4a1af4b39b
 https://security.google.com/settings/security/apppasswords
+
+connections 
+
+forex_api = https://gist.github.com/
+forex_path = {"path": "/opt/airflow/dags/files"}
+hive_conn = hive-server:10000 /hive-hive
+spark_conn = spark://spark-master:7077
