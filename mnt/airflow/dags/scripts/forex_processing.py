@@ -1,31 +1,25 @@
-from airflow import DAG
-from airflow.providers.http.sensors.http import HttpSensor
-from airflow.operators.email import EmailOperator
-from datetime import datetime, timedelta
+from os.path import expanduser, join, abspath
 
-default_args = {
-    "owner": "airflow",
-    "email_on_failure": False,
-    "email_on_retry": False,
-    "email": "admin@localhost.com",
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5)
-}
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import from_json
 
-with DAG("forex_data_pipeline", start_date=datetime(2021, 1 ,1), 
-    schedule_interval="@daily", default_args=default_args, catchup=False) as dag:
+warehouse_location = abspath('spark-warehouse')
 
-    is_forex_rates_available = HttpSensor(
-        task_id="is_forex_rates_available",
-        http_conn_id="forex_api",
-        endpoint="marclamberti/f45f872dea4dfd3eaa015a4a1af4b39b",
-        response_check=lambda response: "rates" in response.text,
-        poke_interval=5,
-        timeout=20
-    )
-    send_email_notification = EmailOperator(
-        task_id="send_email_notification",
-        to="bjpraciano@gmail.com",
-        subject="forex_data_pipeline",
-        html_content="<h3>forex_data_pipeline</h3>"
-    )
+# Initialize Spark Session
+spark = SparkSession \
+    .builder \
+    .appName("Forex processing") \
+    .config("spark.sql.warehouse.dir", warehouse_location) \
+    .enableHiveSupport() \
+    .getOrCreate()
+
+# Read the file forex_rates.json from the HDFS
+df = spark.read.json('hdfs://namenode:9000/forex/forex_rates.json')
+
+# Drop the duplicated rows based on the base and last_update columns
+forex_rates = df.select('base', 'last_update', 'rates.eur', 'rates.usd', 'rates.cad', 'rates.gbp', 'rates.jpy', 'rates.nzd') \
+    .dropDuplicates(['base', 'last_update']) \
+    .fillna(0, subset=['EUR', 'USD', 'JPY', 'CAD', 'GBP', 'NZD'])
+
+# Export the dataframe into the Hive table forex_rates
+forex_rates.write.mode("append").insertInto("forex_rates")
