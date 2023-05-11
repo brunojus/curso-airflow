@@ -12,7 +12,7 @@ spark = SparkSession \
     .config("spark.sql.warehouse.dir", warehouse_location) \
     .enableHiveSupport() \
     .getOrCreate()
-/opt/airflow/dags/files
+
 # Read the file forex_rates.json from the HDFS
 df = spark.read.json('hdfs://namenode:9000/forex/forex_rates.json')
 
