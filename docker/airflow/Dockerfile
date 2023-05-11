@@ -45,7 +45,8 @@ RUN pip install --upgrade "pip==23.1.2" && \
     pip install apache-airflow-providers-apache-hive==6.0.0 && \
     pip install apache-airflow-providers-apache-spark==4.0.1 && \
     pip install apache-airflow-providers-slack==7.2.0 && \
-    pip install apache-airflow-providers-http==4.3.0
+    pip install apache-airflow-providers-http==4.3.0 && \
+    pip install apache-airflow-providers-postgres
 
 # Copy the airflow.cfg file (config)
 #COPY ./config/airflow.cfg ${AIRFLOW_HOME}/airflow.cfg

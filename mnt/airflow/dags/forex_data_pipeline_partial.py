@@ -6,6 +6,7 @@ from airflow.operators.bash import BashOperator
 from airflow.providers.apache.hive.operators.hive import HiveOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 from airflow.operators.email import EmailOperator
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
 
 from datetime import datetime, timedelta
 import csv
@@ -95,10 +96,16 @@ with DAG("forex_data_pipeline", start_date=datetime(2021, 1 ,1),
             STORED AS TEXTFILE
         """
     )
+    forex_processing = SparkSubmitOperator(
+        task_id="forex_processing",
+        application="/opt/airflow/dags/scripts/forex_processing.py",
+        conn_id="spark_conn",
+        verbose=False
+    )
 
     send_email_notification = EmailOperator(
         task_id="send_email_notification",
-        to="airflow_course@yopmail.com",
+        to="bjpraciano@gmail.com",
         subject="forex_data_pipeline",
         html_content="<h3>forex_data_pipeline</h3>"
     )
