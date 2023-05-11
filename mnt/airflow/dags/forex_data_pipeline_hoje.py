@@ -123,7 +123,8 @@ with DAG("forex_data_pipeline_curso_hoje", start_date=datetime(2023,1,1),
 
     salvar_postgres_dados = BashOperator(
         task_id = "salvar_postgres_dados",
-        bash_command = 'python /opt/airflow/dags/processamento_pandas.py'
+        bash_command='python /opt/airflow/dags/scripts/processamento_pandas.py',
+        dag=dag
     )
 
     enviar_email = EmailOperator(
