@@ -1,0 +1,74 @@
+[2023-05-14T15:44:01.594+0000] {processor.py:156} INFO - Started process (PID=42) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:44:01.617+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:44:01.628+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:01.627+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:44:05.429+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:44:05.694+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.694+0000] {manager.py:504} INFO - Created Permission View: can read on DAG:tz_dag
+[2023-05-14T15:44:05.731+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.731+0000] {manager.py:504} INFO - Created Permission View: can delete on DAG:tz_dag
+[2023-05-14T15:44:05.754+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.754+0000] {manager.py:504} INFO - Created Permission View: can edit on DAG:tz_dag
+[2023-05-14T15:44:05.756+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.756+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:44:05.789+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.789+0000] {dag.py:2747} INFO - Creating ORM DAG for tz_dag
+[2023-05-14T15:44:05.815+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:44:05.814+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:44:05.863+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 4.300 seconds
+[2023-05-14T15:46:17.730+0000] {processor.py:156} INFO - Started process (PID=36) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:17.734+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:46:17.737+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:17.737+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:19.625+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:19.726+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:19.726+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:46:19.760+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:19.760+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:46:19.798+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 2.076 seconds
+[2023-05-14T15:46:50.080+0000] {processor.py:156} INFO - Started process (PID=104) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:50.084+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:46:50.087+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:50.087+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:51.589+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:46:51.626+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:51.626+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:46:51.671+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:46:51.671+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:46:51.709+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 1.636 seconds
+[2023-05-14T15:47:24.395+0000] {processor.py:156} INFO - Started process (PID=176) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:47:24.404+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:47:24.408+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:47:24.407+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:47:33.065+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:47:33.162+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:47:33.161+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:47:33.311+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:47:33.311+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:47:33.406+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 9.022 seconds
+[2023-05-14T15:48:04.025+0000] {processor.py:156} INFO - Started process (PID=250) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:04.031+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:48:04.035+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:04.035+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:06.854+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:06.888+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:06.888+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:48:06.924+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:06.924+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:48:06.961+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 2.942 seconds
+[2023-05-14T15:48:37.468+0000] {processor.py:156} INFO - Started process (PID=330) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:37.473+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:48:37.477+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:37.476+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:41.793+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:48:41.868+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:41.868+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:48:41.944+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:48:41.944+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:48:41.999+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 4.537 seconds
+[2023-05-14T15:49:12.116+0000] {processor.py:156} INFO - Started process (PID=406) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:12.120+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:49:12.123+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:12.123+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:15.402+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:15.516+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:15.516+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:49:15.636+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:15.635+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:49:15.697+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 3.588 seconds
+[2023-05-14T15:49:46.295+0000] {processor.py:156} INFO - Started process (PID=475) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:46.298+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:49:46.301+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:46.300+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:49.985+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:49:50.043+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:50.042+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:49:50.116+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:49:50.112+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:49:50.166+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 3.879 seconds
+[2023-05-14T15:50:20.456+0000] {processor.py:156} INFO - Started process (PID=547) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:50:20.459+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:50:20.462+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:50:20.462+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:50:24.666+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:50:24.725+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:50:24.724+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:50:24.785+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:50:24.785+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:50:24.868+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 4.420 seconds
+[2023-05-14T15:50:56.161+0000] {processor.py:156} INFO - Started process (PID=626) to work on /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:50:56.170+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/tz_dag.py for tasks to queue
+[2023-05-14T15:50:56.173+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:50:56.173+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:50:59.949+0000] {processor.py:809} INFO - DAG(s) dict_keys(['tz_dag']) retrieved from /opt/airflow/dags/tz_dag.py
+[2023-05-14T15:51:00.014+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:51:00.013+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-05-14T15:51:00.109+0000] {logging_mixin.py:149} INFO - [2023-05-14T15:51:00.108+0000] {dag.py:3490} INFO - Setting next_dagrun for tz_dag to 2019-03-29T01:00:00+00:00, run_after=2019-03-30T01:00:00+00:00
+[2023-05-14T15:51:00.224+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/tz_dag.py took 4.074 seconds

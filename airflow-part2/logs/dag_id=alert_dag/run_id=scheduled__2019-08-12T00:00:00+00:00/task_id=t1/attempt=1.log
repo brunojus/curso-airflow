@@ -1,0 +1,23 @@
+[2023-05-14T15:51:00.176+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: alert_dag.t1 scheduled__2019-08-12T00:00:00+00:00 [queued]>
+[2023-05-14T15:51:00.756+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: alert_dag.t1 scheduled__2019-08-12T00:00:00+00:00 [queued]>
+[2023-05-14T15:51:00.759+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-05-14T15:51:00.832+0000] {taskinstance.py:1350} INFO - Executing <Task(BashOperator): t1> on 2019-08-12 00:00:00+00:00
+[2023-05-14T15:51:00.853+0000] {standard_task_runner.py:57} INFO - Started process 1035 to run task
+[2023-05-14T15:51:00.867+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'alert_dag', 't1', 'scheduled__2019-08-12T00:00:00+00:00', '--job-id', '232', '--raw', '--subdir', 'DAGS_FOLDER/alert_dag.py', '--cfg-path', '/tmp/tmpuinssqmo']
+[2023-05-14T15:51:00.873+0000] {standard_task_runner.py:85} INFO - Job 232: Subtask t1
+[2023-05-14T15:51:01.054+0000] {task_command.py:410} INFO - Running <TaskInstance: alert_dag.t1 scheduled__2019-08-12T00:00:00+00:00 [running]> on host ccd7d24ea349
+[2023-05-14T15:51:01.299+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Airflow' AIRFLOW_CTX_DAG_ID='alert_dag' AIRFLOW_CTX_TASK_ID='t1' AIRFLOW_CTX_EXECUTION_DATE='2019-08-12T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2019-08-12T00:00:00+00:00'
+[2023-05-14T15:51:01.307+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-05-14T15:51:01.310+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'exit 1']
+[2023-05-14T15:51:01.343+0000] {subprocess.py:86} INFO - Output:
+[2023-05-14T15:51:01.349+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2023-05-14T15:51:01.380+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2023-05-14T15:51:01.390+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=alert_dag, task_id=t1, execution_date=20190812T000000, start_date=20230514T155100, end_date=20230514T155101
+[2023-05-14T15:51:01.414+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 232 for task t1 (Bash command failed. The command returned a non-zero exit code 1.; 1035)
+[2023-05-14T15:51:01.438+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-05-14T15:51:01.484+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
