@@ -5,7 +5,7 @@ from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 
 default_args = {
-    'start_date': datetime(2019, 1, 1)
+    'start_date': datetime(2023, 1, 1)
 }
 
 def process():
