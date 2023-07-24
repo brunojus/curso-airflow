@@ -1,0 +1,5 @@
+Falar sobre start_date
+falar sobre schedule_interval
+falar sobre timezone
+falar sobre dependencias
+python3 -m pytest

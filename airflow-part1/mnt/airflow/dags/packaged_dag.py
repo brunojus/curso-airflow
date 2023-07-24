@@ -2,20 +2,13 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 
 from datetime import datetime, timedelta
-
-def first_task():
-    print("Hello from first task")
-
-def second_task():
-    print("Hello from second task")
-
-def third_task():
-    print("Hello from third task")
+from functions.helpers import first_task, second_task, third_task
 
 default_args = {
-    'start_date': datetime(2019, 1, 1),
+    'start_date': datetime(2023, 1, 1),
     'owner': 'Airflow'
 }
+
 
 with DAG(dag_id='packaged_dag', schedule_interval="0 0 * * *", default_args=default_args) as dag:
 
